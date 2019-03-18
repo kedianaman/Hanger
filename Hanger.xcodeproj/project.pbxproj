@@ -12,8 +12,10 @@
 		A351A9D2EC19A512320C264D /* Pods_HangerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC48C1F32665A12658621122 /* Pods_HangerTests.framework */; };
 		ED11D81E223EE7AB004A76C8 /* GiveYouGlory.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED11D81D223EE7A7004A76C8 /* GiveYouGlory.ttf */; };
 		ED11D820223EEB1C004A76C8 /* NoYesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */; };
+		ED11D822223EF73A004A76C8 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D821223EF73A004A76C8 /* ClothingItem.swift */; };
+		ED11D824223F05CE004A76C8 /* LikedClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */; };
 		ED9D674C223AFB720012A750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D674B223AFB720012A750 /* AppDelegate.swift */; };
-		ED9D674E223AFB720012A750 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D674D223AFB720012A750 /* ViewController.swift */; };
+		ED9D674E223AFB720012A750 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D674D223AFB720012A750 /* HomeViewController.swift */; };
 		ED9D6751223AFB720012A750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9D674F223AFB720012A750 /* Main.storyboard */; };
 		ED9D6753223AFB730012A750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9D6752223AFB730012A750 /* Assets.xcassets */; };
 		ED9D6756223AFB730012A750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9D6754223AFB730012A750 /* LaunchScreen.storyboard */; };
@@ -52,9 +54,11 @@
 		DC48C1F32665A12658621122 /* Pods_HangerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HangerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED11D81D223EE7A7004A76C8 /* GiveYouGlory.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GiveYouGlory.ttf; sourceTree = "<group>"; };
 		ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoYesButton.swift; sourceTree = "<group>"; };
+		ED11D821223EF73A004A76C8 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
+		ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedClothesViewController.swift; sourceTree = "<group>"; };
 		ED9D6748223AFB720012A750 /* Hanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9D674B223AFB720012A750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED9D674D223AFB720012A750 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED9D674D223AFB720012A750 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ED9D6750223AFB720012A750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED9D6752223AFB730012A750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED9D6755223AFB730012A750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,10 +150,12 @@
 			isa = PBXGroup;
 			children = (
 				ED9D674B223AFB720012A750 /* AppDelegate.swift */,
-				ED9D674D223AFB720012A750 /* ViewController.swift */,
+				ED9D674D223AFB720012A750 /* HomeViewController.swift */,
+				ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */,
 				ED9D674F223AFB720012A750 /* Main.storyboard */,
 				ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */,
 				ED9D6779223B02FE0012A750 /* ClothingItemView.xib */,
+				ED11D821223EF73A004A76C8 /* ClothingItem.swift */,
 				ED9D677B223B06170012A750 /* ClothingItemKolodaView.swift */,
 				ED9D6752223AFB730012A750 /* Assets.xcassets */,
 				ED9D6754223AFB730012A750 /* LaunchScreen.storyboard */,
@@ -407,9 +413,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED9D674E223AFB720012A750 /* ViewController.swift in Sources */,
+				ED11D822223EF73A004A76C8 /* ClothingItem.swift in Sources */,
+				ED9D674E223AFB720012A750 /* HomeViewController.swift in Sources */,
 				ED9D674C223AFB720012A750 /* AppDelegate.swift in Sources */,
 				ED11D820223EEB1C004A76C8 /* NoYesButton.swift in Sources */,
+				ED11D824223F05CE004A76C8 /* LikedClothesViewController.swift in Sources */,
 				ED9D677C223B06170012A750 /* ClothingItemKolodaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

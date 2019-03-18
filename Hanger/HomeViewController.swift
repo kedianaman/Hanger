@@ -9,7 +9,7 @@
 import UIKit
 import Koloda
 
-class ViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
+class HomeViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
     
     // MARK: Properties
     @IBOutlet weak var kolodaView: KolodaView!
@@ -45,6 +45,23 @@ class ViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate
         
     }
     
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .default
+    }
+    
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
+        return 0.5
+    }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        print ("swiped \(index) dress in direction \(direction)")
+    }
+    
+    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] {
+        return [.left, .right, .topRight, .topLeft, .bottomLeft, .bottomRight]
+    }
+
+    
     // MARK: DataSource
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return tops.count
@@ -53,14 +70,13 @@ class ViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate
     // MARK: IB Actions
 
     @IBAction func dislikePressed(_ sender: Any) {
-        kolodaView.swipe(.left)
+        kolodaView.swipe(.topLeft)
     }
     
     @IBAction func likePressed(_ sender: Any) {
-        kolodaView.swipe(.right)
+        kolodaView.swipe(.topRight)
 
     }
-    
     
 //    func addShadow(view: UIView) {
 //        let shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 18)
