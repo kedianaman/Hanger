@@ -103,18 +103,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Y4s-ZM-LaG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-lZ-n1F">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WgL-55-47M">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2lo-KX-nhk">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="380"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LikedItemCellID" id="2lo-KX-nhk" customClass="LikedItemCollectionViewCell" customModule="Hanger" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="170" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="380"/>
@@ -157,6 +160,7 @@
                                                 </stackView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="OJ2-8J-7v7" secondAttribute="trailing" id="Bnl-kh-z11"/>
                                             <constraint firstAttribute="trailing" secondItem="flL-vJ-BCS" secondAttribute="trailing" constant="12" id="E2d-zQ-wIg"/>
@@ -168,19 +172,35 @@
                                             <constraint firstItem="flL-vJ-BCS" firstAttribute="top" secondItem="OJ2-8J-7v7" secondAttribute="bottom" constant="10" id="ubi-pn-uLG"/>
                                         </constraints>
                                         <size key="customSize" width="170" height="380"/>
+                                        <connections>
+                                            <outlet property="itemImage" destination="OJ2-8J-7v7" id="Lhq-5a-BiS"/>
+                                            <outlet property="itemTitleLabel" destination="dtS-Kp-rto" id="tMk-zc-ILb"/>
+                                            <outlet property="priceLabel" destination="gVZ-K0-ER5" id="ev3-fo-Yv5"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="sa6-pq-iwB" id="aEp-iY-NBF"/>
+                                    <outlet property="delegate" destination="sa6-pq-iwB" id="03X-rZ-o2G"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hgs-lZ-n1F" firstAttribute="top" secondItem="3Vw-hk-0Kn" secondAttribute="top" id="1iQ-vB-DsP"/>
                             <constraint firstItem="3Vw-hk-0Kn" firstAttribute="bottom" secondItem="Hgs-lZ-n1F" secondAttribute="bottom" id="3Oh-Pk-vFV"/>
+                            <constraint firstAttribute="trailing" secondItem="Y4s-ZM-LaG" secondAttribute="trailing" id="Csn-t8-n8a"/>
                             <constraint firstItem="Hgs-lZ-n1F" firstAttribute="leading" secondItem="3Vw-hk-0Kn" secondAttribute="leading" id="GAV-mq-2gj"/>
                             <constraint firstItem="3Vw-hk-0Kn" firstAttribute="trailing" secondItem="Hgs-lZ-n1F" secondAttribute="trailing" id="Xfa-UY-hyv"/>
+                            <constraint firstItem="Y4s-ZM-LaG" firstAttribute="leading" secondItem="PDr-L1-TNS" secondAttribute="leading" id="jTc-8f-zEV"/>
+                            <constraint firstAttribute="bottom" secondItem="Y4s-ZM-LaG" secondAttribute="bottom" id="oLD-U4-Jig"/>
+                            <constraint firstItem="Y4s-ZM-LaG" firstAttribute="top" secondItem="PDr-L1-TNS" secondAttribute="top" id="zv0-9i-iqV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Vw-hk-0Kn"/>
                     </view>
+                    <connections>
+                        <outlet property="itemsCollectionView" destination="Hgs-lZ-n1F" id="j0p-4a-i9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Sy-bO-8ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

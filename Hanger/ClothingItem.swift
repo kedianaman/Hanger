@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class ClothingItem {
-    var dressName: String
+    var title: String
     var price: Double
     var mainImage: UIImage
     var allImages: [UIImage]
     var websiteLink: NSURL
     
-    init(dressName: String, price: Double, mainImage: UIImage, allImages: [UIImage], websiteLink: NSURL) {
-        self.dressName = dressName
+    init(title: String, price: Double, mainImage: UIImage, allImages: [UIImage], websiteLink: NSURL) {
+        self.title = title
         self.price = price
         self.mainImage = mainImage
         self.allImages = allImages

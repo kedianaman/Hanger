@@ -14,6 +14,7 @@
 		ED11D820223EEB1C004A76C8 /* NoYesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */; };
 		ED11D822223EF73A004A76C8 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D821223EF73A004A76C8 /* ClothingItem.swift */; };
 		ED11D824223F05CE004A76C8 /* LikedClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */; };
+		ED11D826223F6650004A76C8 /* LikedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED11D825223F6650004A76C8 /* LikedItemCollectionViewCell.swift */; };
 		ED9D674C223AFB720012A750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D674B223AFB720012A750 /* AppDelegate.swift */; };
 		ED9D674E223AFB720012A750 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D674D223AFB720012A750 /* HomeViewController.swift */; };
 		ED9D6751223AFB720012A750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9D674F223AFB720012A750 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoYesButton.swift; sourceTree = "<group>"; };
 		ED11D821223EF73A004A76C8 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedClothesViewController.swift; sourceTree = "<group>"; };
+		ED11D825223F6650004A76C8 /* LikedItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED9D6748223AFB720012A750 /* Hanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9D674B223AFB720012A750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED9D674D223AFB720012A750 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				ED9D674B223AFB720012A750 /* AppDelegate.swift */,
 				ED9D674D223AFB720012A750 /* HomeViewController.swift */,
 				ED11D823223F05CE004A76C8 /* LikedClothesViewController.swift */,
+				ED11D825223F6650004A76C8 /* LikedItemCollectionViewCell.swift */,
 				ED9D674F223AFB720012A750 /* Main.storyboard */,
 				ED11D81F223EEB1C004A76C8 /* NoYesButton.swift */,
 				ED9D6779223B02FE0012A750 /* ClothingItemView.xib */,
@@ -418,6 +421,7 @@
 				ED9D674C223AFB720012A750 /* AppDelegate.swift in Sources */,
 				ED11D820223EEB1C004A76C8 /* NoYesButton.swift in Sources */,
 				ED11D824223F05CE004A76C8 /* LikedClothesViewController.swift in Sources */,
+				ED11D826223F6650004A76C8 /* LikedItemCollectionViewCell.swift in Sources */,
 				ED9D677C223B06170012A750 /* ClothingItemKolodaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
